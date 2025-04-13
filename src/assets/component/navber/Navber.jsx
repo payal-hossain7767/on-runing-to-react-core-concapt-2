@@ -1,5 +1,15 @@
 import React from 'react';
+import Link from '../Link/Link';
 
+
+
+const navigationLinks = [
+  { id: 1, name: "Dashboard", path: "/dashboard" },
+  { id: 2, name: "Profile", path: "/profile" },
+  { id: 3, name: "Settings", path: "/settings" },
+  { id: 4, name: "Messages", path: "/messages" },
+  { id: 5, name: "Logout", path: "/logout" }
+];
 const Navber = () => {
     return (
         <div>
@@ -45,7 +55,14 @@ const Navber = () => {
   </div>
 </div> */}
 
-
+<div>
+  <ul className='flex'>
+  {
+    navigationLinks.map(navData=> <Link navData={navData}></Link>)
+  }
+   
+  </ul>
+</div>
         </div>
     );
 };
