@@ -4,6 +4,7 @@ import './App.css'
 import Navber from './assets/component/navber/Navber'
 import Prices from './assets/component/prices/Prices'
 import { HiX } from 'react-icons/hi'
+import Rechart from './assets/component/Rechat/Rechart'
 
 
 
@@ -26,6 +27,9 @@ function App() {
           <Prices  pricesPromices={pricesPromices}></Prices>
         </Suspense>
       </main>
+      <footer>
+        <Rechart></Rechart>
+      </footer>
 
     </>
   )
