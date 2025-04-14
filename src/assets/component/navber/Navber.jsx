@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from '../Link/Link';
-
-
-
+import { IoMenu } from "react-icons/io5";
+import { AiOutlineX } from "react-icons/ai";
 const navigationLinks = [
   { id: 1, name: "Dashboard", path: "/dashboard" },
   { id: 2, name: "Profile", path: "/profile" },
@@ -11,60 +10,36 @@ const navigationLinks = [
   { id: 5, name: "Logout", path: "/logout" }
 ];
 const Navber = () => {
-    return (
-        <div>
-            {/* <div className="navbar bg-base-100 shadow-sm">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
-    </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
-</div> */}
 
-<div>
-  <ul className='flex'>
-  {
-    navigationLinks.map(navData=> <Link navData={navData}></Link>)
-  }
-   
-  </ul>
-</div>
-        </div>
-    );
+  const [menu, setMenu] = useState(false)
+  const links = navigationLinks.map((navData, index) => <Link key={index} navData={navData}></Link>)
+  return (
+    <div>
+      <div className='flex justify-between mx-10 my-10'>
+        <span className='flex items-center gap-4' onClick={() => setMenu(!menu)}>
+          {
+            menu ? <AiOutlineX className='md:hidden' size={30} /> : <IoMenu size={30} className='md:hidden' />
+          }
+          <ul className={`md:hidden absolute duration-1000
+           ${menu ? 'top-36' : '-top-96'}
+              bg-cyan-400 p-4 rounded-2xl left-16`}>
+            {
+              links
+            }
+          </ul>
+          <h3 className='md:flex hidden text-4xl text-cyan-300 font-extrabold'>My Navber</h3>
+        </span>
+
+        <ul className='md:flex hidden'>
+          {
+            links
+          }
+
+        </ul>
+        <button className='btn bg-cyan-300 '> Sing in</button>
+      </div>
+    </div>
+  );
 };
 
 export default Navber;

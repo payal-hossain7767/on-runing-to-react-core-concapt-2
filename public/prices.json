@@ -1,0 +1,57 @@
+[
+    {
+      "name": "Duo Premium",
+      "id":1,
+      "price": "BDT 299 for 2 months",
+      "renewalPrice": "BDT 299/month after",
+      "features": [
+        "2 Premium accounts",
+        "Shared benefits for two users",
+        "Priority table reservation",
+        "Early access to new dishes",
+        "Free delivery on orders over BDT 500",
+        "Special monthly offers for duos",
+        "Cancel anytime",
+        "Flexible payment: subscribe or one-time"
+      ],
+      "note": "Only for new Premium users",
+      "shopName": "Your Food Shop Name"
+    },
+    {
+      "name": "Family Premium",
+      "id":2,
+      "price": "BDT 499 for 2 months",
+      "renewalPrice": "BDT 499/month after",
+      "features": [
+        "Up to 4 Premium accounts",
+        "Family combo meal discounts",
+        "Exclusive access to family nights",
+        "Free delivery on all family orders",
+        "Birthday surprises for family members",
+        "Early table reservation privileges",
+        "Cancel anytime",
+        "Flexible payment options"
+      ],
+      "note": "Only for new Premium members",
+      "shopName": "Your Food Shop Name"
+    },
+    {
+      "name": "Business Premium",
+      "id":3,
+      "price": "BDT 999 for 2 months",
+      "renewalPrice": "BDT 999/month after",
+      "features": [
+        "Up to 10 Premium accounts",
+        "Customized meal plans for teams",
+        "Monthly office catering discounts",
+        "Free express delivery",
+        "Priority service during peak hours",
+        "Corporate event booking perks",
+        "Cancel anytime",
+        "Flexible monthly or annual billing"
+      ],
+      "note": "New Premium users only",
+      "shopName": "Your Food Shop Name"
+    }
+  ]
+  
